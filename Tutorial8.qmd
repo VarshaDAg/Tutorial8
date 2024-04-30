@@ -1,0 +1,12 @@
+---
+title: "Tutorial8"
+author: "Varsha"
+format: html
+---
+
+```{r}
+library(readr)
+Data_Tables_Criminal_Incidents_Visualisation_Year_Ending_December_2019 <- read_csv("Data_Tables_Criminal_Incidents_Visualisation_Year_Ending_December_2019.csv")
+View(Data_Tables_Criminal_Incidents_Visualisation_Year_Ending_December_2019)
+```
+
