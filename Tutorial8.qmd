@@ -6,15 +6,31 @@ format: html
 
 ```{r}
 library(readr)
+library(dplyr)
+library(tidyverse)
+library(ggplot2)
 ```
-
 
 ```{r}
 data <- read_csv("Data_Tables_Criminal_Incidents_Visualisation_Year_Ending_December_2019.csv")
 ```
 
-
 ```{r}
 View(data)
+```
+
+# Introduction
+Hello world
+This is for tutorial 8
+I want to learn how to merge
+
+# figure
+```{r}
+data %>% 
+  filter ('Year Ending' == "December") %>%
+ggplot(aes
+       (x = "Year",
+         y = "Incidents Recorded")) +
+  geom_col()
 ```
 
