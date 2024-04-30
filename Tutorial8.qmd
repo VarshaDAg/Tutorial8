@@ -15,6 +15,6 @@ data <- read_csv("Data_Tables_Criminal_Incidents_Visualisation_Year_Ending_Decem
 
 
 ```{r}
-View(Data_Tables_Criminal_Incidents_Visualisation_Year_Ending_December_2019)
+View(data)
 ```
 
