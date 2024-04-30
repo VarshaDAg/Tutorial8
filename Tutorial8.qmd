@@ -9,18 +9,16 @@ library(readr)
 library(ggplot2)
 library(dplyr)
 library(tidyverse)
-
 ```
-
 
 ```{r}
 data <- read_csv("Data_Tables_Criminal_Incidents_Visualisation_Year_Ending_December_2019.csv")
 ```
 
-
 ```{r}
 View(data)
 ```
+
 
 
 ```{r}
@@ -29,3 +27,22 @@ tidynew <- datza %>% filter('Year ending' == "December")
 tidynew %>% ggplot(aes(x='Offence Division', y = 'Incidents recorded'))+geom_boxplot()
 ```
 
+
+# Introduction
+Hello world
+This is for tutorial 8
+I want to learn how to merge
+
+# figure
+```{r}
+data %>% 
+  filter ('Year Ending' == "December") %>%
+ggplot(aes
+       (x = "Year",
+         y = "Incidents Recorded")) +
+  geom_col()
+```
+
+
+jdbecd cj
+>>>>>>> origin
