@@ -1,11 +1,15 @@
 ---
 title: "Tutorial8"
-author: "Varsha"
+author: "Travis"
 format: html
 ---
 
 ```{r}
 library(readr)
+library(dplyr)
+library(tidyverse)
+library(hrbrthemes)
+library(ggplot2)
 ```
 
 
@@ -16,5 +20,24 @@ data <- read_csv("Data_Tables_Criminal_Incidents_Visualisation_Year_Ending_Decem
 
 ```{r}
 View(data)
+```
+
+```{r}
+data %>%
+  tail(10) %>%
+  ggplot( aes(x='year', y='Rate per 100,000 population')) +
+    geom_line( color="grey") +
+    geom_point(shape=21, color="black", fill="#69b3a2", size=6) +
+    theme_ipsum() +
+    ggtitle("Evolution of bitcoin price")
+
+data_bar_chart <- data %>% 
+  group_by('Offence Division') %>%
+  summarise(avg_rate = mean('Rate per 100,000 population'))
+
+barplot(data$`Rate per 100,000 population`, names=data$`Offence Division`, 
+        col="#69b3a2",
+        horiz=T, las=1
+        )
 ```
 
